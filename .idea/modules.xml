@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaseSpring/BaseSpring.iml" filepath="$PROJECT_DIR$/BaseSpring/BaseSpring.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../WebSpring/webSpring.iml" filepath="$PROJECT_DIR$/../WebSpring/webSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebSpring/WebSpring.iml" filepath="$PROJECT_DIR$/WebSpring/WebSpring.iml" />
     </modules>
   </component>
 </project>
