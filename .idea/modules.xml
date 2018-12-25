@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaseSpring/BaseSpring.iml" filepath="$PROJECT_DIR$/BaseSpring/BaseSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../WebSpring/webSpring.iml" filepath="$PROJECT_DIR$/../WebSpring/webSpring.iml" />
+    </modules>
+  </component>
+</project>

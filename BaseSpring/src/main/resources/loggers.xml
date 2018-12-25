@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="consoleEvent" class="loggers.ConsoleEventLogger"/>
+    <bean id="event" class="beans.Event" scope="prototype">
+        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
+    </bean>
+
+    <bean id="dateFormat" class="java.text.DateFormat"
+          factory-method="getDateTimeInstance"/>
+
+    <bean id="fileEvent" class="loggers.FileEventLogger" init-method="init">
+        <constructor-arg value="filename"/>
+    </bean>
+    <bean id="cacheEvent" class="loggers.CacheFileEventLogger"
+          destroy-method="destroy"
+          parent="fileEvent">
+        <!--abstract="true"> не подтянет родительские методы-->
+        <!--depend-on = "app" инициализирует бин app после инициализации cacheEvent-->
+        <!--lazy-init = "true" инициализирует бин только после вызова getBean("")-->
+
+    </bean>
+    <bean id="combinedEvent" class="loggers.CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleEvent"/>
+                <ref bean="fileEvent"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
