@@ -5,22 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<div>
-    <form method="post">
-        <input type="text" name="text" placeholder=" Введите сообщение"/>
-        <input type="text" name="tag" placeholder="Тег">
-        <button type="submit">Добавить</button>
-    </form>
-</div>
-<div>Messages List</div>
-{{#messages}}
-<div>
-    <b>{{id}}</b>
-    <span>{{text}}</span>
-    <i>{{tag}}</i>
 
-</div>
-{{/messages}}
 <p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
