@@ -1,4 +1,4 @@
-package hello;
+package repos;
 import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class

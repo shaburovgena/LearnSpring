@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="webSpring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.yet.spring.core" target="1.8" />
+      <module name="webSpring" target="1.8" />
       <module name="WebSpring" target="1.8" />
     </bytecodeTargetLevel>
   </component>
